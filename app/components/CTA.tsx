@@ -1,11 +1,14 @@
 "use client";
+import { useState } from "react";
 import { SITE, MAILTO } from "../config";
 import { useLang } from "../context/LanguageContext";
 import { t } from "../i18n/translations";
+import LeadModal from "./LeadModal";
 
 export default function CTA() {
   const { lang } = useLang();
   const T = t[lang].cta;
+  const [modalOpen, setModalOpen] = useState(false);
 
   const TRUST_ITEMS = [
     { label: T.trust1Label, sub: T.trust1Sub },
@@ -65,12 +68,15 @@ export default function CTA() {
                 </svg>
                 {T.downloadBtn}
               </a>
-              <a href={MAILTO.prebuilt} className="btn-ghost px-7 py-3 text-sm">
+              <button
+                onClick={() => setModalOpen(true)}
+                className="btn-ghost px-7 py-3 text-sm"
+              >
                 {T.prebuiltBtn}
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                   <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-              </a>
+              </button>
             </div>
 
             {/* Trust row */}
@@ -98,6 +104,9 @@ export default function CTA() {
           </p>
         </div>
       </div>
+
+      {/* Lead capture modal */}
+      <LeadModal open={modalOpen} onClose={() => setModalOpen(false)} />
     </section>
   );
 }

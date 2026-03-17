@@ -116,6 +116,25 @@ export const t = {
       trust4Label: "30-min setup",
       trust4Sub: "Flash, configure, plug in",
     },
+    // Lead modal
+    leadModal: {
+      badge: "Pre-built units",
+      title: "Request a pre-built unit",
+      sub: "We'll reach out within 1–2 business days with pricing, availability, and shipping options.",
+      nameLabel: "Your name",
+      namePlaceholder: "Jane Smith",
+      emailLabel: "Email address",
+      emailPlaceholder: "you@example.com",
+      messageLabel: "Message (optional)",
+      messagePlaceholder: "Country, quantity, custom text blocks, questions…",
+      submitBtn: "Send request",
+      sending: "Sending…",
+      privacy: "No spam. Your info is only used to process your request.",
+      errorGeneric: "Something went wrong. Please try again or email us directly.",
+      successTitle: "Request received!",
+      successSub: "We'll be in touch within 1–2 business days. Check your inbox for a confirmation.",
+      successClose: "Got it",
+    },
     // Footer
     footer: {
       rights: "All rights reserved.",
@@ -239,6 +258,25 @@ export const t = {
       trust3Sub: "Código Python, editable",
       trust4Label: "Configuración en 30 min",
       trust4Sub: "Flashea, configura, conecta",
+    },
+    // Lead modal
+    leadModal: {
+      badge: "Unidades pre-ensambladas",
+      title: "Solicitar una unidad pre-ensamblada",
+      sub: "Nos pondremos en contacto en 1–2 días hábiles con precios, disponibilidad y opciones de envío.",
+      nameLabel: "Tu nombre",
+      namePlaceholder: "Juan García",
+      emailLabel: "Correo electrónico",
+      emailPlaceholder: "tu@correo.com",
+      messageLabel: "Mensaje (opcional)",
+      messagePlaceholder: "País, cantidad, bloques de texto personalizados, preguntas…",
+      submitBtn: "Enviar solicitud",
+      sending: "Enviando…",
+      privacy: "Sin spam. Tu información solo se usa para procesar tu solicitud.",
+      errorGeneric: "Algo salió mal. Inténtalo de nuevo o escríbenos directamente.",
+      successTitle: "¡Solicitud recibida!",
+      successSub: "Te contactaremos en 1–2 días hábiles. Revisa tu bandeja de entrada para la confirmación.",
+      successClose: "Entendido",
     },
     // Footer
     footer: {
