@@ -1,16 +1,20 @@
 "use client";
 import { useState } from "react";
-
-const NAV_LINKS = [
-  { label: "Features", href: "#features" },
-  { label: "How it works", href: "#how-it-works" },
-  { label: "Use cases", href: "#use-cases" },
-  { label: "Specs", href: "#specs" },
-  { label: "FAQ", href: "#faq" },
-];
+import { useLang } from "../context/LanguageContext";
+import { t } from "../i18n/translations";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { lang, setLang } = useLang();
+  const T = t[lang].nav;
+
+  const NAV_LINKS = [
+    { label: T.features, href: "#features" },
+    { label: T.howItWorks, href: "#how-it-works" },
+    { label: T.useCases, href: "#use-cases" },
+    { label: T.specs, href: "#specs" },
+    { label: T.faq, href: "#faq" },
+  ];
 
   return (
     <header className="sticky top-0 z-50 border-b border-pico-700/60 backdrop-blur-xl bg-pico-950/80">
@@ -54,6 +58,16 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="flex items-center gap-3">
+          {/* Language toggle */}
+          <button
+            onClick={() => setLang(lang === "en" ? "es" : "en")}
+            className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-pico-muted border border-pico-700 rounded-lg hover:text-pico-text hover:border-pico-600 transition-colors duration-150 cursor-pointer"
+            aria-label="Toggle language"
+          >
+            <span className={lang === "en" ? "text-pico-primary" : ""}>EN</span>
+            <span className="text-pico-700">|</span>
+            <span className={lang === "es" ? "text-pico-primary" : ""}>ES</span>
+          </button>
           <a
             href="#cta"
             className="hidden sm:flex btn-primary text-xs px-4 py-2"
@@ -73,7 +87,7 @@ export default function Navbar() {
                 strokeLinejoin="round"
               />
             </svg>
-            Download
+            {T.download}
           </a>
 
           {/* Mobile menu button */}
