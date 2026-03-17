@@ -27,6 +27,10 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: SITE.metaTitle,
   description: SITE.metaDescription,
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+  },
   keywords: [
     "USB HID automation",
     "RP2040",
