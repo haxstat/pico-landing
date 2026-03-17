@@ -23,7 +23,7 @@ export const SITE = {
   circuitpythonVersion: "CircuitPython 10.0.3",
 
   // SEO / Meta
-  siteUrl: "https://hellopico.vercel.app",
+  siteUrl: "https://pico-landing.haxstat.workers.dev",
   metaTitle: "PICO Human Presence Pro — Programmable USB HID Automation Device",
   metaDescription:
     "PICO is a programmable USB HID device built on the RP2040. It generates human-patterned keyboard and mouse activity — configurable timing, natural pauses, randomized paths. Offline. No drivers. Plug and play.",
