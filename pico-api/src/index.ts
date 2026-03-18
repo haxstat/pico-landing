@@ -321,13 +321,8 @@ async function handleLead(req: Request, env: Env): Promise<Response> {
     return json({ error: "Could not save your request. Try again." }, 500, origin);
   }
 
-  // Send emails (non-blocking — don't fail the response if email fails)
+  // Send notification to owner only (customer confirmation requires verified domain)
   await Promise.allSettled([
-    sendEmail(env, {
-      to: cleanEmail,
-      subject: "We got your PICO request ✓",
-      html: leadConfirmationEmail(cleanName),
-    }),
     sendEmail(env, {
       to: env.NOTIFICATION_EMAIL,
       subject: `New PICO lead: ${cleanName}`,
