@@ -14,12 +14,12 @@ export const SITE = {
   email: "cesar.gonzalez.franco@gmail.com",
 
   // Downloads (replace with real URLs when available)
-  configuratorDownloadUrl: "https://github.com/haxstat/pico-landing/releases/download/v1.0.0/PICO_Configurator_Installer.exe",
+  configuratorDownloadUrl: "https://github.com/haxstat/pico-landing/releases/download/v1.0.1/PICO_Configurator_Installer.exe",
   firmwareDownloadUrl: "",     // e.g. "https://github.com/.../firmware.uf2"
 
   // Versions
   firmwareVersion: "v1.0.0",
-  configuratorVersion: "1.0.0",
+  configuratorVersion: "1.0.1",
   circuitpythonVersion: "CircuitPython 10.0.3",
 
   // SEO / Meta
